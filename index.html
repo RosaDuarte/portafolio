@@ -239,7 +239,7 @@
             </div>
         
             <div id="d34">
-                <form method="POST" class="field" id="form" action="correo.php">
+                <form method="POST" class="field" id="form" action="https://formspree.io/f/xpzkegvr">
                     <div class="control has-icons-left has-icons-right">
                         <input type="text" placeholder="Nombre" class="input block" name="name">
                         <span class="icon is-small is-left">
@@ -247,17 +247,18 @@
                         </span>
                     </div>
                     <div class="control has-icons-left has-icons-right">
-                        <input type="email" placeholder="Correo" class="input block" name="email">
+                        <input type="email" placeholder="Correo" class="input block" name="_replyto">
                         <span class="icon is-small is-left">
                             <i class="fas fa-envelope"></i>
                         </span>
                     </div>
                     <div class="control">
-                        <textarea placeholder="Mensaje" class="textarea" name="msg"></textarea>
+                        <textarea placeholder="Mensaje" class="textarea" name="message"></textarea>
                     </div>
                     <div class="control">
-                        <input type="submit" placeholder="Enviar" class="input button is-link" name="submit">
+                        <input type="submit" placeholder="Enviar" class="input button is-link"  value="Submit">
                     </div>   
+                    <input type="hidden" name="_next" value="https://rosaduarte.github.io/portafolio/" style="display:none">
                 </form>
             </div>
         
