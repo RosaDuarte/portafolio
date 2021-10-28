@@ -41,10 +41,14 @@ async function handleSubmit(event){
         }
     })
     if(response.ok){
-        this.reset()
-        document.querySelector("modal").classList.add("is-active");
-        document.querySelector("modal-background").addEventListener("click", ()=>{
-            document.querySelector("modal").classList.remove("is-active");
+        const modal = document.querySelector(".modal");
+        const modalbg = document.querySelector(".modal-background");
+        
+        modal.classList.add("is-active");
+        modalbg.addEventListener("click", ()=>{
+            modal.classList.remove("is-active");
         })
+
+        this.reset()
     }
 }
