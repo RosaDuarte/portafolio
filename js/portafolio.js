@@ -28,7 +28,10 @@ burger.addEventListener("click", activarMenu, false);
 items.addEventListener("click", desactivarMenu);
 
 const form = document.getElementById("form");
-form.addEventListener('submit', handleSubmit)
+form.addEventListener('submit', handleSubmit);
+
+const modal = document.querySelector(".modal");
+const modalbg = document.querySelector(".modal-background");
 
 async function handleSubmit(event){
     event.preventDefault()
@@ -41,8 +44,6 @@ async function handleSubmit(event){
         }
     })
     if(response.ok){
-        const modal = document.querySelector(".modal");
-        const modalbg = document.querySelector(".modal-background");
         
         modal.classList.add("is-active");
         modalbg.addEventListener("click", ()=>{
