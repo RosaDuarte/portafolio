@@ -30,9 +30,6 @@ items.addEventListener("click", desactivarMenu);
 const form = document.getElementById("form");
 form.addEventListener('submit', handleSubmit);
 
-const modal = document.querySelector(".modal");
-const modalbg = document.querySelector(".modal-background");
-
 async function handleSubmit(event){
     event.preventDefault()
     const formulario = new FormData(this)
@@ -44,12 +41,6 @@ async function handleSubmit(event){
         }
     })
     if(response.ok){
-        
-        modal.classList.add("is-active");
-        modalbg.addEventListener("click", ()=>{
-            modal.classList.remove("is-active");
-        })
-
         this.reset()
     }
 }
