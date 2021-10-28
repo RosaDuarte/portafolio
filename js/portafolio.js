@@ -42,6 +42,9 @@ async function handleSubmit(event){
     })
     if(response.ok){
         this.reset()
-        alert("Te responderé pronto")
+        document.querySelector("modal").classList.add("is-active");
+        document.querySelector("modal-background").addEventListener("click", ()=>{
+            document.querySelector("modal").classList.remove("is-active");
+        })
     }
 }
