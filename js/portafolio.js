@@ -27,3 +27,21 @@ function desactivarMenu(){
 burger.addEventListener("click", activarMenu, false); 
 items.addEventListener("click", desactivarMenu);
 
+const form = document.getElementById("form");
+form.addEventListener('submit', handleSubmit)
+
+async function handleSubmit(event){
+    event.preventDefault()
+    const formulario = new FormData(this)
+    const response= await fetch(this.action, {
+        method: this.method,
+        body: formulario,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    if(response.ok){
+        this.reset()
+        alert("Te responderé pronto")
+    }
+}
