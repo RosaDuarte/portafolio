@@ -174,7 +174,8 @@ body{
 .column3 img, #d13 img{
     width: 300px; 
     height: 300px;
-    border-radius: 5px;  
+    border-radius: 5px; 
+    object-fit: cover; 
 }
 
 .column3 h2, #d13 h2{
